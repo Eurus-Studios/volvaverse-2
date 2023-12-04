@@ -45,7 +45,7 @@ const Footer = () => {
 
           {/* email input */}
           <Box display="flex" gap="10px">
-            <Input type="text" placeholder="Your email" />
+            <Input className="ft-input" type="text" placeholder="Your email" />
             <Button
               className="footer-btn"
               fontFamily="Bebas Neue"

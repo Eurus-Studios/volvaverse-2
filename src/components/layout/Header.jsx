@@ -11,7 +11,7 @@ const Header = () => {
       borderBottom="1px solid #3B3B3B"
       className="header"
     >
-      <a href="">ABOUT US</a>
+      <a href="#about">ABOUT US</a>
       <a href="">VOLA STORE</a>
       <a href="">DOCS</a>
       <a href="">

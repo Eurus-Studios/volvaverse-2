@@ -26,7 +26,7 @@
     position: absolute;
     left: 15%;
     top: -140px;
-    z-index: -1;
+    /* z-index: 1; */
 }
 
 /* header */
@@ -65,4 +65,12 @@
 
 .footer-btn {
     background: linear-gradient(to right, #745AC3 55%, #F88AB0 100%) !important;
+}
+
+.ft-input {
+    border: solid 1px black !important;
+}
+
+.ft-input:focus {
+    box-shadow: none !important;
 }

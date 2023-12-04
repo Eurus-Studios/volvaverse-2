@@ -1,0 +1,71 @@
+.sp-1 {
+    position: absolute;
+    transform: rotate(90deg);
+    top: 22%;
+    left: -79px;
+}
+
+.sp-2 {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+.sp-3 {
+    position: absolute;
+    transform: rotate(90deg);
+    top: 65%;
+    left: -20px;
+    margin: 0% !important;
+}
+
+.home-sc-links {
+    top: 50%;
+    transform: translate(0, -50%);
+}   
+
+.sp-4 {
+    position: absolute;
+    transform: rotate(90deg);
+    color: #3B3B3B;
+    font-family: Montserrat;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 4px;
+    top: -65px;
+    left: -40px;
+    font-size: 1.2rem;
+}
+
+.hr-1 {
+    width: 100%;
+    border-top: 1px solid #3D3D3D;
+    position: absolute;
+    transform: rotate(90deg);
+    width: 50px;
+    top: -26.5px;
+    left: 0px;
+}
+
+.hr-2 {
+    width: 100%;
+    border-top: 1px solid #3D3D3D;
+    position: absolute;
+    transform: rotate(90deg);
+    width: 50px;
+    top: -26.5px;
+    right: 0px;
+}
+
+.home-img {
+    top: 8%;
+    left: 32%;
+}
+
+.home-btn:hover {
+    background: linear-gradient(90deg, #745AC3 66.98%, rgba(248, 138, 176, .8) 100%) !important;
+}
+
+.home-btn:active {
+    background: linear-gradient(90deg, #745AC3 66.98%, rgba(248, 138, 176, .8) 100%) !important;
+}
