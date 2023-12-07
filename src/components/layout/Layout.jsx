@@ -1,16 +1,3 @@
-// import React from "react";
-
-// const Layout = () => {
-//   return (
-//     <div className="layout">
-//       <div className="l-1">abc</div>
-//       <div className="l-2">abc</div>
-//     </div>
-//   );
-// };
-
-// export default Layout;
-
 import React from "react";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -19,7 +6,7 @@ import "../../styles/layout.css";
 
 const Layout = ({ children, title, description, keywords, author }) => {
   return (
-    <div>
+    <div className="main">
       <Helmet>
         <meta charSet="utf-8" />
         <meta name="description" content={description} />
@@ -31,6 +18,11 @@ const Layout = ({ children, title, description, keywords, author }) => {
       <main className="layout">
         <div className="l-1"></div>
         <div className="l-2"></div>
+        <div className="l-3"></div>
+        <div className="l-4"></div>
+        <div className="l-5"></div>
+        <div className="l-6"></div>
+        <div className="l-7"></div>
 
         {children}
       </main>

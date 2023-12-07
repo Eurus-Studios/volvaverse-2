@@ -1,25 +1,46 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Box, Image } from "@chakra-ui/react";
 
 const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <Box
       display="flex"
       justifyContent="space-between"
       alignItems="center"
-      p="15px 25px 5px 25px"
+      p="5px 25px 5px 25px"
       borderBottom="1px solid #3B3B3B"
-      className="header"
+      zIndex="100"
+      position="sticky"
+      top="0"
+      className={`header ${isScrolled ? "header-bg" : ""}`}
     >
       <a href="#about">ABOUT US</a>
-      <a href="">VOLA STORE</a>
-      <a href="">DOCS</a>
-      <a href="">
+      <a href="#team">TEAM</a>
+      <a href="#docs">DOCS</a>
+      <a href="#blogs">
         <Image src="/images/logo.png" h="48px" w="51px" />
       </a>
-      <a href="">FAQ</a>
-      <a href="">COMMUNITY</a>
-      <a href="">
+      <a href="#faq">FAQ</a>
+      <a href="#community">COMMUNITY</a>
+      <a href="#association">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="28"

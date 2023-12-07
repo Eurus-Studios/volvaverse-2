@@ -1,0 +1,24 @@
+.vd-wrap {
+    width: 80dvw;
+    box-shadow: -12px -12px 25px #fffc, 10px 10px 25px #3b3b3bb3;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    position: relative;
+}
+
+.vd-wrap::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%);
+    pointer-events: none;
+}
+
+video {
+    object-fit: contain;
+    overflow-clip-margin: content-box;
+    /* opacity: .5; */
+}

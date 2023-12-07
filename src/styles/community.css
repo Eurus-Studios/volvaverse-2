@@ -1,0 +1,8 @@
+.trs-txt {
+    background: linear-gradient(180deg, rgba(116, 90, 195, 0.70) 0%, rgba(116, 90, 195, 0.00) 38.44%, rgba(248, 138, 176, 0.00) 52.76%, rgba(248, 138, 176, 0.70) 100%) !important;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    user-select: none;
+    /* Prevent text selection */
+}
