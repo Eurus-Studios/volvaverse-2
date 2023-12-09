@@ -34,7 +34,7 @@ const Faq = () => {
             fontWeight="600"
             lineHeight="normal"
             textAlign="bottom"
-            fontSize="1.5rem"
+            fontSize="1.2rem"
           >
             If for some reason your question is not here, feel free to{" "}
             <a

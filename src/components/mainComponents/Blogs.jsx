@@ -7,11 +7,8 @@ import {
   Button,
   Card,
   CardBody,
-  CardFooter,
   Stack,
   Heading,
-  Divider,
-  ButtonGroup,
 } from "@chakra-ui/react";
 import "../../styles/blogs.css";
 import { blogs } from "../../data/blogData";

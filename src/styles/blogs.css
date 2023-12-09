@@ -1,7 +1,34 @@
 .blogs-btn:hover {
-    background: #745AC3;
+    background: #745AC3 !important;
 }
 
 .blogs-btn:active {
-    background: #745AC3;
+    background: #745AC3 !important;
+}
+
+.hr {
+    width: 100%;
+    border: 1px solid #3B3B3B;
+}
+
+.b-sp {
+    margin-top: -11px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.back {
+    color: #3D3D3D;
+    font-family: Bebas Neue;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.search {
+    border: #3B3B3B 1px solid !important;
+}
+
+.search:focus {
+    box-shadow: none !important;
 }

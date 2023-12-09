@@ -9,6 +9,9 @@ html, body {
   box-sizing: border-box;
   scroll-behavior: smooth;
   /* z-index: -10; */
+  max-width: 100dvw;
+  /* overflow-x: hidden; */
+  /* overflow-y: scroll; */
 }
 
 #root {

@@ -1,10 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 import { Helmet } from "react-helmet";
 import "../../styles/layout.css";
 
 const Layout = ({ children, title, description, keywords, author }) => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className="main">
       <Helmet>
@@ -14,6 +32,7 @@ const Layout = ({ children, title, description, keywords, author }) => {
         <meta name="author" content={author} />
         <title>{title}</title>
       </Helmet>
+      <div className={`${isScrolled ? "header-ht" : ""}`}></div>
       <Header />
       <main className="layout">
         <div className="l-1"></div>
@@ -24,7 +43,7 @@ const Layout = ({ children, title, description, keywords, author }) => {
         <div className="l-6"></div>
         <div className="l-7"></div>
 
-        {children}
+        <div className="child">{children}</div>
       </main>
       <Footer />
     </div>
