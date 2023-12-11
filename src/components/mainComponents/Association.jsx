@@ -1,9 +1,16 @@
 import React from "react";
 import { Box, Text, Image } from "@chakra-ui/react";
+import "../../styles/association.css";
 
 const Association = () => {
   return (
-    <Box pt="70px" mb="100px" px="100px" zIndex="10">
+    <Box
+      pt="70px"
+      mb="100px"
+      px="100px"
+      zIndex="10"
+      className="all-cnt as-main"
+    >
       <Text
         color="#3B3B3B"
         fontFamily="Bebas Neue"
@@ -11,6 +18,7 @@ const Association = () => {
         lineHeight="normal"
         fontSize="4.5rem"
         zIndex="10"
+        className="all-title"
       >
         ASSOCIATIONS
       </Text>
@@ -21,6 +29,7 @@ const Association = () => {
         justifyContent="center"
         mt="30px"
         zIndex="10"
+        className="as-boxes"
       >
         <Box
           bg="#ECF0F3"
@@ -32,6 +41,7 @@ const Association = () => {
           alignItems="center"
           boxShadow="-8.86335px -7.38613px 18.4653px #fafbff, 7.38613px 7.38613px 18.4653px #161b1d40;"
           zIndex="10"
+          className="as-box"
         >
           <Box>
             <Box
@@ -50,6 +60,7 @@ const Association = () => {
               lineHeight="normal"
               fontSize="1.4rem"
               mt="20px"
+              className="as-box-txt"
             >
               FILECOIN
             </Text>
@@ -66,6 +77,7 @@ const Association = () => {
           alignItems="center"
           boxShadow="-8.86335px -7.38613px 18.4653px #fafbff, 7.38613px 7.38613px 18.4653px #161b1d40;"
           zIndex="10"
+          className="as-box"
         >
           <Box>
             <Box
@@ -84,6 +96,7 @@ const Association = () => {
               lineHeight="normal"
               fontSize="1.4rem"
               mt="20px"
+              className="as-box-txt"
             >
               LISK
             </Text>
@@ -100,6 +113,7 @@ const Association = () => {
           alignItems="center"
           boxShadow="-8.86335px -7.38613px 18.4653px #fafbff, 7.38613px 7.38613px 18.4653px #161b1d40;"
           zIndex="10"
+          className="as-box"
         >
           <Box>
             <Box
@@ -118,6 +132,7 @@ const Association = () => {
               lineHeight="normal"
               fontSize="1.4rem"
               mt="20px"
+              className="as-box-txt"
             >
               CRYPTIC ENTMT.
             </Text>
@@ -134,8 +149,9 @@ const Association = () => {
           alignItems="center"
           boxShadow="-8.86335px -7.38613px 18.4653px #fafbff, 7.38613px 7.38613px 18.4653px #161b1d40;"
           zIndex="10"
+          className="as-box"
         >
-          <Box>
+          <Box h="100%" className="as-box-4">
             <Box
               mt="5px"
               display="flex"
@@ -152,6 +168,7 @@ const Association = () => {
               lineHeight="normal"
               fontSize="1.4rem"
               mt="20px"
+              className="as-box-txt"
             >
               YSCHOOL
             </Text>
@@ -168,8 +185,9 @@ const Association = () => {
           alignItems="center"
           boxShadow="-8.86335px -7.38613px 18.4653px #fafbff, 7.38613px 7.38613px 18.4653px #161b1d40;"
           zIndex="10"
+          className="as-box"
         >
-          <Box>
+          <Box className="as-box-5">
             <Box
               mt="5px"
               display="flex"
@@ -186,6 +204,7 @@ const Association = () => {
               lineHeight="normal"
               fontSize="1.4rem"
               mt="10px"
+              className="as-box-txt"
             >
               FINSTREET
             </Text>
@@ -202,8 +221,9 @@ const Association = () => {
           alignItems="center"
           boxShadow="-8.86335px -7.38613px 18.4653px #fafbff, 7.38613px 7.38613px 18.4653px #161b1d40;"
           zIndex="10"
+          className="as-box"
         >
-          <Box h="100%">
+          <Box h="100%" className="as-box-6">
             <Box
               mt="5px"
               display="flex"
@@ -221,6 +241,7 @@ const Association = () => {
               lineHeight="normal"
               fontSize="1.4rem"
               mt="20px"
+              className="as-box-txt"
             >
               MINING DEVS
             </Text>

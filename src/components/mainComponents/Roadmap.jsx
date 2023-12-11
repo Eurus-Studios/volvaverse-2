@@ -1,9 +1,10 @@
 import React from "react";
 import { Box, Text } from "@chakra-ui/react";
+import "../../styles/roadmap.css";
 
 const Roadmap = () => {
   return (
-    <Box minH="100dvh" px="100px" pt="70px" mb="150px">
+    <Box minH="100dvh" px="100px" pt="70px" mb="150px" className="all-cnt rd">
       <Box position="relative">
         <Text
           color="#3B3B3B"
@@ -11,12 +12,13 @@ const Roadmap = () => {
           fontWeight="400"
           lineHeight="normal"
           fontSize="4.5rem"
+          className="all-title"
         >
           ROADMAP
         </Text>
         <Box>
           {/* timeline-svg */}
-          <Box position="absolute" top="-330px" left="0">
+          <Box position="absolute" top="-330px" left="0" className="timeline">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="30"
@@ -81,14 +83,26 @@ const Roadmap = () => {
           </Box>
 
           {/* timeline-1 */}
-          <Box position="relative" ps="70px" mt="35px">
-            <Box position="absolute" top="140px" left="120px">
+          <Box
+            position="relative"
+            ps="70px"
+            mt="35px"
+            className="rd-txt-cnt rd-1"
+          >
+            <Box
+              position="absolute"
+              top="140px"
+              left="120px"
+              className="rd-ab-cnt"
+            >
               <Text
                 textTransform="uppercase"
                 color="#3B3B3B"
                 fontFamily="Bebas Neue"
                 fontWeight="400"
                 fontSize="4rem"
+                className="rd-hd"
+                lineHeight="100%"
               >
                 Launching metaverse
               </Text>
@@ -98,6 +112,7 @@ const Roadmap = () => {
                 fontWeight="500"
                 w="50%"
                 fontSize="1.1rem"
+                className="rd-d"
               >
                 Launching the Metaverse platform and selling Land NFTsPromoting
                 social media handles to build the Volaverse Community Building
@@ -111,20 +126,33 @@ const Roadmap = () => {
               lineHeight="normal"
               textShadow="10px 10px 25px rgba(0, 0, 0, 0.25), -12px -10px 25px rgba(255, 255, 255, 0.25)"
               fontSize="15rem"
+              className="rd-num"
             >
               01
             </Text>
           </Box>
 
           {/* timeline-2 */}
-          <Box position="relative" ps="70px" mt="44px">
-            <Box position="absolute" top="140px" left="120px">
+          <Box
+            position="relative"
+            ps="70px"
+            mt="44px"
+            className="rd-txt-cnt rd-2"
+          >
+            <Box
+              position="absolute"
+              top="140px"
+              left="120px"
+              className="rd-ab-cnt"
+            >
               <Text
                 textTransform="uppercase"
                 color="#3B3B3B"
                 fontFamily="Bebas Neue"
                 fontWeight="400"
                 fontSize="4rem"
+                className="rd-hd"
+                lineHeight="100%"
               >
                 Building Creator’s economy
               </Text>
@@ -134,6 +162,7 @@ const Roadmap = () => {
                 fontWeight="500"
                 w="50%"
                 fontSize="1.1rem"
+                className="rd-d"
               >
                 Incentivizing the course and content creators to build more
                 coursesBuilding a model to fund the course/content creators
@@ -146,20 +175,33 @@ const Roadmap = () => {
               lineHeight="normal"
               textShadow="10px 10px 25px rgba(0, 0, 0, 0.25), -12px -10px 25px rgba(255, 255, 255, 0.25)"
               fontSize="15rem"
+              className="rd-num"
             >
               02
             </Text>
           </Box>
 
           {/* timeline-3 */}
-          <Box position="relative" ps="70px" mt="46px">
-            <Box position="absolute" top="140px" left="120px">
+          <Box
+            position="relative"
+            ps="70px"
+            mt="46px"
+            className="rd-txt-cnt rd-3"
+          >
+            <Box
+              position="absolute"
+              top="140px"
+              left="120px"
+              className="rd-ab-cnt"
+            >
               <Text
                 textTransform="uppercase"
                 color="#3B3B3B"
                 fontFamily="Bebas Neue"
                 fontWeight="400"
                 fontSize="4rem"
+                className="rd-hd"
+                lineHeight="100%"
               >
                 Building gamified experience
               </Text>
@@ -169,6 +211,7 @@ const Roadmap = () => {
                 fontWeight="500"
                 w="50%"
                 fontSize="1.1rem"
+                className="rd-d"
               >
                 Encouraging the end users to consume more content through better
                 gamification.Expanding the course domains to other fields
@@ -181,20 +224,33 @@ const Roadmap = () => {
               lineHeight="normal"
               textShadow="10px 10px 25px rgba(0, 0, 0, 0.25), -12px -10px 25px rgba(255, 255, 255, 0.25)"
               fontSize="15rem"
+              className="rd-num"
             >
               03
             </Text>
           </Box>
 
           {/* timeline-4 */}
-          <Box position="relative" ps="70px" mt="45px">
-            <Box position="absolute" top="140px" left="120px">
+          <Box
+            position="relative"
+            ps="70px"
+            mt="45px"
+            className="rd-txt-cnt rd-4"
+          >
+            <Box
+              position="absolute"
+              top="140px"
+              left="120px"
+              className="rd-ab-cnt"
+            >
               <Text
                 textTransform="uppercase"
                 color="#3B3B3B"
                 fontFamily="Bebas Neue"
                 fontWeight="400"
                 fontSize="4rem"
+                className="rd-hd"
+                lineHeight="100%"
               >
                 CREATING PARTNESHIPS FOR JOBS
               </Text>
@@ -204,9 +260,10 @@ const Roadmap = () => {
                 fontWeight="500"
                 w="50%"
                 fontSize="1.1rem"
+                className="rd-d"
               >
                 Launch a platform to place content consumers into jobs or
-                matchmake for web 3.0 projectsCollaborating with universities
+                matchmake for web 3.0 projects Collaborating with universities
                 for official degree programs
               </Text>
             </Box>
@@ -217,6 +274,7 @@ const Roadmap = () => {
               lineHeight="normal"
               textShadow="10px 10px 25px rgba(0, 0, 0, 0.25), -12px -10px 25px rgba(255, 255, 255, 0.25)"
               fontSize="15rem"
+              className="rd-num"
             >
               04
             </Text>

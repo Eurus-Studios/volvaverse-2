@@ -4,6 +4,7 @@
     overflow: hidden;
     border-radius: 1.5rem;
     position: relative;
+    z-index: 10 !important;
 }
 
 .vd-wrap::before {
@@ -21,4 +22,37 @@ video {
     object-fit: contain;
     overflow-clip-margin: content-box;
     /* opacity: .5; */
+    z-index: 10 !important;
+}
+
+@media (max-width: 991px) {
+    .vd-wrap {
+        width: 95dvw;
+        border-radius: 1rem;
+    }
+    .abt-t {
+        font-size: 1.5rem !important;
+    }
+    .abt-d {
+        font-size: .7rem !important;
+        width: 100% !important;
+    }
+    .abt-txt {
+        left: 10px !important;
+        bottom: 10px !important;
+    }
+    .abt-boxes {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        margin-top: 40px !important;
+        gap: 10px !important;
+        margin-bottom: 0px !important;
+    }
+    .abt-box {
+        width: 100% !important;
+    }
+    .abt-main {
+        min-height: 10dvh !important;
+        padding-top: 70px !important;
+    }
 }

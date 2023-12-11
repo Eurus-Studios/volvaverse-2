@@ -4,7 +4,7 @@ import "../../styles/community.css";
 
 const Community = () => {
   return (
-    <Box px="100px" pt="70px" minH="60dvh">
+    <Box px="100px" pt="70px" className="all-cnt comm-main">
       <Box>
         <Text
           color="#3B3B3B"
@@ -12,20 +12,20 @@ const Community = () => {
           fontWeight="400"
           lineHeight="normal"
           fontSize="4.5rem"
+          className="all-title"
+          mb="20px"
         >
           COMMUNITY
         </Text>
-        <Box mt="30px" position="relative">
+        <Box position="relative">
           <Text
             color="transparent"
             fontFamily="Bebas Neue"
             fontWeight="400"
-            lineHeight="normal"
+            lineHeight="100%"
             fontSize="22.8rem"
             className="trs-txt"
             textAlign="center"
-            position="absolute"
-            top="-50"
           >
             VOLAVERSE
           </Text>
@@ -35,9 +35,8 @@ const Community = () => {
             alignItems="center"
             px="85px"
             position="absolute"
-            top="90px"
             width="100dvw"
-            left="-100px"
+            className="cm-sc"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -60,6 +59,7 @@ const Community = () => {
               justifyContent="center"
               alignItems="center"
               p="25px"
+              className="cm-circle"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -95,6 +95,7 @@ const Community = () => {
               justifyContent="center"
               alignItems="center"
               p="25px"
+              className="cm-circle"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -130,6 +131,7 @@ const Community = () => {
               justifyContent="center"
               alignItems="center"
               p="25px"
+              className="cm-circle"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -165,6 +167,7 @@ const Community = () => {
               justifyContent="center"
               alignItems="center"
               p="25px"
+              className="cm-circle"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -200,6 +203,7 @@ const Community = () => {
               justifyContent="center"
               alignItems="center"
               p="25px"
+              className="cm-circle"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -235,6 +239,7 @@ const Community = () => {
               justifyContent="center"
               alignItems="center"
               p="25px"
+              className="cm-circle"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

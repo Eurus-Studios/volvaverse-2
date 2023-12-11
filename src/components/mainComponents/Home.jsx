@@ -9,7 +9,7 @@ const Home = () => {
   };
 
   return (
-    <Box minH="92vh" position="relative">
+    <Box minH="92vh" position="relative" className="home-main">
       {/* welcome text */}
       <Text
         position="absolute"
@@ -19,6 +19,7 @@ const Home = () => {
         lineHeight="normal"
         letterSpacing="5px"
         fontSize="2rem"
+        className="pc"
       >
         <span className="sp-1">WELCOME</span>
         <span className="sp-2">
@@ -69,7 +70,7 @@ const Home = () => {
       {/* right social links */}
       <Box
         position="absolute"
-        right="1%"
+        right="10px"
         display="flex"
         flexDirection="column"
         gap="30px"
@@ -124,7 +125,7 @@ const Home = () => {
       </Box>
 
       {/* scroll */}
-      <Box position="absolute" right="1%" bottom="5%">
+      <Box position="absolute" right="1%" bottom="5%" className="pc">
         <a href="#about">
           <span className="sp-4">SCROLL</span>
           <svg
@@ -162,64 +163,74 @@ const Home = () => {
           position="relative"
           h="500"
           w="380px"
+          className="hm-box"
         >
           <hr className="hr-1" />
           <hr className="hr-2" />
+
+          {/* <Model /> */}
+          <Image
+            src="/images/home.png"
+            // h="550px"
+            minW="450px"
+            position="absolute"
+            className="home-img"
+            zIndex="10"
+          />
+
+          {/* text-1 */}
+          <Text
+            color="#3B3B3B"
+            fontFamily="Bebas Neue"
+            fontWeight="400"
+            lineHeight="normal"
+            fontSize="6rem"
+            position="absolute"
+            top="35px"
+            left="-168px"
+            className="all-title-h t-a"
+          >
+            VOLAVERSE
+          </Text>
+
+          {/* text-2 */}
+          <Text
+            color="#3B3B3B"
+            fontFamily="Bebas Neue"
+            fontWeight="400"
+            lineHeight="normal"
+            fontSize="6rem"
+            position="absolute"
+            top="190px"
+            right="-252px"
+            className="all-title-h t-b"
+          >
+            EDUCATION
+          </Text>
+          {/* text-3 */}
+          <Text
+            color="#3B3B3B"
+            fontFamily="Bebas Neue"
+            fontWeight="400"
+            lineHeight="normal"
+            fontSize="6rem"
+            position="absolute"
+            bottom="12px"
+            left="-295px"
+            className="all-title-h t-c"
+          >
+            METAVERSE
+          </Text>
         </Box>
       </Box>
 
-      {/* <Model /> */}
-      <Image
-        src="/images/home.png"
-        h="550px"
-        position="absolute"
-        className="home-img"
-      />
-
-      {/* text-1 */}
-      <Text
-        color="#3B3B3B"
-        fontFamily="Bebas Neue"
-        fontWeight="400"
-        lineHeight="normal"
-        fontSize="6rem"
-        position="absolute"
-        top="10%"
-        left="24.5%"
-      >
-        VOLAVERSE
-      </Text>
-
-      {/* text-2 */}
-      <Text
-        color="#3B3B3B"
-        fontFamily="Bebas Neue"
-        fontWeight="400"
-        lineHeight="normal"
-        fontSize="6rem"
-        position="absolute"
-        top="32%"
-        right="20.2%"
-      >
-        EDUCATION
-      </Text>
-
-      {/* text-3 */}
-      <Text
-        color="#3B3B3B"
-        fontFamily="Bebas Neue"
-        fontWeight="400"
-        lineHeight="normal"
-        fontSize="6rem"
-        position="absolute"
-        bottom="27%"
-        left="15.9%"
-      >
-        METAVERSE
-      </Text>
-
       {/* home-button */}
-      <Box display="flex" justifyContent="center" mt="55px">
+      <Box
+        display="flex"
+        justifyContent="center"
+        mt="75px"
+        className="hm-btn-cnt"
+      >
         <Button
           fontFamily="Bebas Neue"
           fontWeight="400"
@@ -230,6 +241,7 @@ const Home = () => {
           padding="25px 25px"
           className="home-btn"
           onClick={handleClick}
+          zIndex="10"
         >
           GETS STARTED
         </Button>

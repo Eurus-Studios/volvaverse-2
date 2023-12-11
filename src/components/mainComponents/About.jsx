@@ -11,16 +11,26 @@ const About = () => {
         display="flex"
         justifyContent="center"
         alignItems="center"
+        className="abt-main"
+        zIndex="10"
       >
         {/* video */}
-        <Box position="relative">
-          <Box position="absolute" zIndex="10" left="30px" bottom="50px">
+        <Box position="relative" zIndex="10">
+          <Box
+            position="absolute"
+            zIndex="15"
+            left="30px"
+            bottom="50px"
+            className="abt-txt"
+          >
             <Text
               fontFamily="Bebas Neue"
               fontWeight="400"
               color="white"
               lineHeight="normal"
               fontSize="3rem"
+              className="abt-t"
+              zIndex="15"
             >
               ABOUT US
             </Text>
@@ -31,6 +41,8 @@ const About = () => {
               lineHeight="normal"
               width="85%"
               fontSize="1.2rem"
+              className="abt-d"
+              zIndex="15"
             >
               We at Volaverse are working towards creating a community driven
               metaverse on blockchain for Web 3.0 enthusiasts around the globe.
@@ -40,7 +52,7 @@ const About = () => {
             </Text>
           </Box>
           <div className="vd-wrap">
-            <video autoPlay loop className="abt-video">
+            <video autoPlay loop muted className="abt-video">
               <source src="/videos/about.mp4" autoPlay loop type="video/mp4" />
             </video>
           </div>
@@ -48,7 +60,13 @@ const About = () => {
       </Box>
 
       {/* products */}
-      <Box display="flex" px="100px" my="50px" gap="20px">
+      <Box
+        display="flex"
+        px="100px"
+        className="all-cnt abt-boxes"
+        my="50px"
+        gap="20px"
+      >
         {/* p-1 */}
         <Box
           bg="rgba(255,255,255,.01)"
@@ -57,6 +75,7 @@ const About = () => {
           pb="30px"
           borderRadius="1.9rem"
           w="25%"
+          className="abt-box"
         >
           <Box
             py="50px"
@@ -95,6 +114,7 @@ const About = () => {
           pb="30px"
           borderRadius="1.9rem"
           w="25%"
+          className="abt-box"
         >
           <Box
             display="flex"
@@ -135,6 +155,7 @@ const About = () => {
           pb="30px"
           borderRadius="1.9rem"
           w="25%"
+          className="abt-box"
         >
           <Box
             display="flex"
@@ -175,6 +196,7 @@ const About = () => {
           pb="30px"
           borderRadius="1.9rem"
           w="25%"
+          className="abt-box"
         >
           <Box
             display="flex"

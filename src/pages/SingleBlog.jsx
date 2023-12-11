@@ -10,14 +10,26 @@ import {
 } from "@chakra-ui/react";
 import { Link, useParams } from "react-router-dom";
 import Layout from "../components/layout/Layout";
-import { blogs } from "../data/blogData";
+// import { blogs } from "../data/blogData";
 import "../styles/blogs.css";
 
 const SingleBlog = () => {
+  const [blogs, setBlogs] = useState([]);
   const { id } = useParams();
   const [index, setIndex] = useState();
 
+  const getAllBlogs = async () => {
+    const data = await fetch("https://backend.volaverse.com/block/blog");
+
+    const value = await data.json();
+    const keys = Object.keys(value);
+    setBlogs(value[keys]);
+    // console.log(value[keys]);
+  };
+
   useEffect(() => {
+    getAllBlogs();
+    // console.log(blogs);
     window.scrollTo(0, 0);
   }, []);
 
@@ -31,8 +43,15 @@ const SingleBlog = () => {
   };
 
   return (
-    <Layout title={"abc"}>
-      <Box minH="100dvh" px="100px" mb="100px" py="50px">
+    <Layout title={`${blogs[index]?.title}`}>
+      <Box
+        minH="100dvh"
+        px="100px"
+        mb="100px"
+        py="50px"
+        className="all-cnt"
+        zIndex="10"
+      >
         <Link to="/blogs" className="back">
           <span>{"<"}</span>BACK
         </Link>
@@ -45,11 +64,13 @@ const SingleBlog = () => {
           fontSize="4.5rem"
           textAlign="center"
           mt="30px"
+          className="all-title"
+          zIndex="10"
         >
           {blogs[index]?.title}
         </Text>
         {blogs[index]?.content.map((c, i) => (
-          <Box key={i}>
+          <Box key={i} zIndex="10">
             <Box display="flex" justifyContent="center" mb="30px">
               <Image
                 borderRadius="1.5rem"
@@ -64,6 +85,7 @@ const SingleBlog = () => {
               fontWeight="500"
               fontSize="1.2rem"
               lineHeight="165%"
+              className="bpg-cnt-txt"
               mb="30px"
               dangerouslySetInnerHTML={{
                 __html: replaceNewlinesWithBreaks(c.desc),
@@ -85,11 +107,17 @@ const SingleBlog = () => {
           lineHeight="normal"
           fontSize="4.5rem"
           mb="30px"
+          className="all-title"
         >
           SIMILAR BLOGS
         </Text>
 
-        <Box display="grid" gridTemplateColumns="1fr 1fr 1fr" gap={8}>
+        <Box
+          display="grid"
+          gridTemplateColumns="1fr 1fr 1fr"
+          gap={8}
+          className="bpg-2-cnt"
+        >
           {blogs.map((b, i) => (
             <>
               {index === i ? (
@@ -102,7 +130,7 @@ const SingleBlog = () => {
                   boxShadow="10px 10px 25px 0px rgba(22, 27, 29, 0.25)"
                   key={i}
                 >
-                  <CardBody p="18px" pb="50px">
+                  <CardBody p="18px" pb="50px" className="card-2">
                     <Image
                       src={b.content[0].img}
                       alt="Green double couch with wooden legs"
@@ -116,6 +144,7 @@ const SingleBlog = () => {
                         fontFamily="Inter"
                         fontWeight="600"
                         lineHeight="16px"
+                        className="bpg-2-dt"
                       >
                         {b.date}
                       </Text>
@@ -125,6 +154,7 @@ const SingleBlog = () => {
                         fontFamily="Bebas Neue"
                         fontWeight="400"
                         lineHeight="100%"
+                        className="bpg-2-t"
                       >
                         {b.title}
                       </Heading>
@@ -133,6 +163,7 @@ const SingleBlog = () => {
                         fontFamily="Montserrat"
                         fontWeight="300"
                         lineHeight="110%"
+                        className="bpg-2-ds"
                       >
                         {b.content[0].desc.substring(0, 200)}...
                       </Text>

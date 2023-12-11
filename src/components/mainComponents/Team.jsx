@@ -1,10 +1,17 @@
 import React from "react";
 import { Box, Text, Image, Stack } from "@chakra-ui/react";
 import { team } from "../../data/teamData";
+import "../../styles/team.css";
 
 const Team = () => {
   return (
-    <Box minH="100dvh" pt="70px" px="100px" zIndex="10">
+    <Box
+      minH="100dvh"
+      pt="70px"
+      px="100px"
+      zIndex="10"
+      className="all-cnt tm-main"
+    >
       <Box zIndex="10">
         <Text
           color="#3B3B3B"
@@ -13,6 +20,7 @@ const Team = () => {
           lineHeight="normal"
           fontSize="4.5rem"
           zIndex="10"
+          className="all-title"
         >
           MEET THE TEAM
         </Text>
@@ -25,7 +33,13 @@ const Team = () => {
           zIndex="10"
         >
           {team.map((t) => (
-            <Box key={t.name} zIndex="10">
+            <Box
+              key={t.name}
+              zIndex="10"
+              display="flex"
+              justifyContent="center"
+              flexDirection="column"
+            >
               <Box
                 bg="#ECF0F3"
                 boxShadow="-13.3826px -11.1521px 27.8803px #fafbff, 11.1521px 11.1521px 27.8803px #161b1d40"
@@ -35,10 +49,11 @@ const Team = () => {
                 justifyContent="center"
                 alignItems="center"
                 zIndex="10"
+                className="tm-box"
               >
                 <Image src={t.image} h="15rem" w="16rem" zIndex="10" />
               </Box>
-              <Box ps="10px" zIndex="10">
+              <Box ps="10px" zIndex="10" className="tm-txt-cnt">
                 <Text
                   color="#3B3B3B"
                   fontFamily="Bebas Neue"
@@ -48,6 +63,7 @@ const Team = () => {
                   fontSize="2rem"
                   mt="15px"
                   zIndex="10"
+                  className="tm-n"
                 >
                   {t.name}
                 </Text>
@@ -57,6 +73,7 @@ const Team = () => {
                   fontWeight="300"
                   lineHeight="normal"
                   fontSize="1.2rem"
+                  className="tm-p"
                 >
                   {t.profile}
                 </Text>
@@ -74,6 +91,8 @@ const Team = () => {
           p="30px"
           gap="50px"
           zIndex="10"
+          className="tm-2-txt"
+          borderRadius="1.5rem"
         >
           <Stack minW="55%" zIndex="10">
             <Text
@@ -82,6 +101,7 @@ const Team = () => {
               fontWeight="300"
               lineHeight="normal"
               zIndex="10"
+              className="tm-hd"
             >
               THE TEAM
             </Text>
@@ -93,6 +113,7 @@ const Team = () => {
               fontSize="1.5rem"
               letterSpacing="1.5px"
               zIndex="10"
+              className="tm-hd-1"
             >
               THE VOLAVERSE ROSTER
             </Text>
@@ -102,6 +123,7 @@ const Team = () => {
               fontWeight="300"
               lineHeight="normal"
               zIndex="10"
+              className="tm-d-2"
             >
               The Volaverse roster is an exclusive, dynamic and curious team of
               Web3 enthusiasts and Edtech experts working diligently towards
@@ -118,6 +140,7 @@ const Team = () => {
               letterSpacing="1.5px"
               fontSize="1.5rem"
               zIndex="10"
+              className="tm-hd-1"
             >
               CAPABILITIES
             </Text>
@@ -132,6 +155,7 @@ const Team = () => {
               columnGap="20px"
               fontSize=".9rem"
               zIndex="10"
+              className="tm-d-2"
             >
               <span>BLOCKCHAIN</span>
               <span>EDUCATION</span>

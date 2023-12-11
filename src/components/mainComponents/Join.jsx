@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Text, Image } from "@chakra-ui/react";
+import "../../styles/join.css";
 
 const Join = () => {
   return (
@@ -9,6 +10,7 @@ const Join = () => {
       display="flex"
       alignItems="center"
       zIndex="10"
+      className="all-cnt join-main"
     >
       <Box w="100%" zIndex="10">
         <Text
@@ -18,16 +20,18 @@ const Join = () => {
           lineHeight="normal"
           fontSize="4.5rem"
           zIndex="10"
+          className="all-title"
         >
           JOIN US
         </Text>
-        <Box display="flex" gap="40px" mt="30px" zIndex="10">
+        <Box display="flex" justifyContent="space-evenly" mt="30px" zIndex="10">
           <Box
             bg="#ECF0F3"
             borderRadius="2rem"
             p="15px"
             boxShadow="-15.8632px -13.2194px 33.0484px #fafbff, 13.2194px 13.2194px 33.0484px #161b1d40"
             zIndex="10"
+            className="join-box"
           >
             <Box display="flex" justifyContent="center">
               <Image src="images/j1.png" w="13rem" />
@@ -49,6 +53,7 @@ const Join = () => {
             p="15px"
             boxShadow="-15.8632px -13.2194px 33.0484px #fafbff, 13.2194px 13.2194px 33.0484px #161b1d40"
             zIndex="10"
+            className="join-box"
           >
             <Box display="flex" justifyContent="center">
               <Image src="images/j2.png" w="13rem" />
@@ -70,6 +75,7 @@ const Join = () => {
             p="15px"
             boxShadow="-15.8632px -13.2194px 33.0484px #fafbff, 13.2194px 13.2194px 33.0484px #161b1d40"
             zIndex="10"
+            className="join-box"
           >
             <Box display="flex" justifyContent="center">
               <Image src="images/j3.png" w="13rem" />
