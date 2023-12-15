@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Box, Text, Image } from "@chakra-ui/react";
 import "../../styles/join.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Join = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <Box
       minH="100dvh"
@@ -21,6 +26,7 @@ const Join = () => {
           fontSize="4.5rem"
           zIndex="10"
           className="all-title"
+          data-aos="zoom-out-right"
         >
           JOIN US
         </Text>
@@ -32,7 +38,32 @@ const Join = () => {
             boxShadow="-15.8632px -13.2194px 33.0484px #fafbff, 13.2194px 13.2194px 33.0484px #161b1d40"
             zIndex="10"
             className="join-box"
+            position="relative"
+            overflow="hidden"
+            data-aos="zoom-in"
           >
+            <Box
+              className="join-hover"
+              p="10px"
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+            >
+              <Box display="flex" gap="5px" alignItems="center">
+                <a
+                  href="https://www.youtube.com/@shinewithswati9"
+                  target="_blank"
+                >
+                  <Image h="2.5rem" src="/images/youtube.png" />
+                </a>
+                <a
+                  href="https://www.instagram.com/shine.with.swati/"
+                  target="_blank"
+                >
+                  <Image h="2rem" src="/images/insta.png" />
+                </a>
+              </Box>
+            </Box>
             <Box display="flex" justifyContent="center">
               <Image src="images/j1.png" w="13rem" />
             </Box>
@@ -54,7 +85,29 @@ const Join = () => {
             boxShadow="-15.8632px -13.2194px 33.0484px #fafbff, 13.2194px 13.2194px 33.0484px #161b1d40"
             zIndex="10"
             className="join-box"
+            overflow="hidden"
+            position="relative"
+            data-aos="zoom-in"
           >
+            <Box
+              className="join-hover"
+              p="10px"
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+            >
+              <Box display="flex" gap="5px" alignItems="center">
+                <a href="https://www.youtube.com/@VolabeeVines" target="_blank">
+                  <Image h="2.5rem" src="/images/youtube.png" />
+                </a>
+                <a
+                  href="https://www.instagram.com/volabeevines/"
+                  target="_blank"
+                >
+                  <Image h="2rem" src="/images/insta.png" />
+                </a>
+              </Box>
+            </Box>
             <Box display="flex" justifyContent="center">
               <Image src="images/j2.png" w="13rem" />
             </Box>
@@ -76,7 +129,29 @@ const Join = () => {
             boxShadow="-15.8632px -13.2194px 33.0484px #fafbff, 13.2194px 13.2194px 33.0484px #161b1d40"
             zIndex="10"
             className="join-box"
+            overflow="hidden"
+            position="relative"
+            data-aos="zoom-in"
           >
+            <Box
+              className="join-hover"
+              p="10px"
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+            >
+              <Box display="flex" gap="5px" alignItems="center">
+                <a href="https://www.youtube.com/@Web3Buddha" target="_blank">
+                  <Image h="2.5rem" src="/images/youtube.png" />
+                </a>
+                <a
+                  href="https://www.instagram.com/web3buddhaa/"
+                  target="_blank"
+                >
+                  <Image h="2rem" src="/images/insta.png" />
+                </a>
+              </Box>
+            </Box>
             <Box display="flex" justifyContent="center">
               <Image src="images/j3.png" w="13rem" />
             </Box>

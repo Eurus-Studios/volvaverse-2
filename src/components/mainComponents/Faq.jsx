@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Box,
   Text,
@@ -10,8 +10,13 @@ import {
 
 import { AddIcon, MinusIcon } from "@chakra-ui/icons";
 import "../../styles/faq.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Faq = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <Box
       minH="100dvh"
@@ -31,6 +36,7 @@ const Faq = () => {
             lineHeight="60px"
             zIndex="10"
             className="all-title faq-title"
+            data-aos="zoom-out-right"
           >
             Frequently Asked Questions
           </Text>

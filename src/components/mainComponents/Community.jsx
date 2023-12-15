@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Box, Text, Image } from "@chakra-ui/react";
 import "../../styles/community.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Community = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <Box px="100px" pt="70px" className="all-cnt comm-main">
       <Box>
@@ -14,6 +19,7 @@ const Community = () => {
           fontSize="4.5rem"
           className="all-title"
           mb="20px"
+          data-aos="zoom-out-right"
         >
           COMMUNITY
         </Text>

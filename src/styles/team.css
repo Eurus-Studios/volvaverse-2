@@ -1,3 +1,19 @@
+.tm-hover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .55);
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    z-index: 10;
+    transition: .4s;
+}
+
+.tm-box:hover .tm-hover {
+    opacity: 1;
+}
+
 @media (max-width: 991px) {
     .tm-box {
         border-radius: 1rem !important;

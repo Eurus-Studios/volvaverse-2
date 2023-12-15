@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Box, Text, Image, Button } from "@chakra-ui/react";
 
 import "../../styles/home.css";
@@ -164,6 +164,7 @@ const Home = () => {
           h="500"
           w="380px"
           className="hm-box"
+          // ml="55px"
         >
           <hr className="hr-1" />
           <hr className="hr-2" />
@@ -188,7 +189,7 @@ const Home = () => {
             position="absolute"
             top="35px"
             left="-168px"
-            className="all-title-h t-a"
+            className="all-title-h t-a slide-in-left"
           >
             VOLAVERSE
           </Text>
@@ -203,7 +204,7 @@ const Home = () => {
             position="absolute"
             top="190px"
             right="-252px"
-            className="all-title-h t-b"
+            className="all-title-h t-b slide-in-right"
           >
             EDUCATION
           </Text>
@@ -217,7 +218,7 @@ const Home = () => {
             position="absolute"
             bottom="12px"
             left="-295px"
-            className="all-title-h t-c"
+            className="all-title-h t-c slide-in-left1"
           >
             METAVERSE
           </Text>
@@ -239,7 +240,7 @@ const Home = () => {
           boxShadow="8.75205px 9.62725px 26.2561px #0006"
           color="white"
           padding="25px 25px"
-          className="home-btn"
+          className="home-btn slide-in-blurred-bottom"
           onClick={handleClick}
           zIndex="10"
         >

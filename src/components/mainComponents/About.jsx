@@ -20,8 +20,14 @@ const About = () => {
             position="absolute"
             zIndex="15"
             left="30px"
-            bottom="50px"
+            bottom="40px"
             className="abt-txt"
+            padding="10px"
+            bg="#00000080"
+            border="0.5px rgba(255,255,255,.4) solid"
+            w="95%"
+            backdropFilter="blur(15px)"
+            borderRadius="1.2rem"
           >
             <Text
               fontFamily="Bebas Neue"
@@ -53,7 +59,7 @@ const About = () => {
           </Box>
           <div className="vd-wrap">
             <video autoPlay loop muted className="abt-video">
-              <source src="/videos/about.mp4" autoPlay loop type="video/mp4" />
+              <source src="/videos/about1.mp4" autoPlay loop type="video/mp4" />
             </video>
           </div>
         </Box>
@@ -76,6 +82,7 @@ const About = () => {
           borderRadius="1.9rem"
           w="25%"
           className="abt-box"
+          data-aos="zoom-in"
         >
           <Box
             py="50px"
@@ -115,6 +122,7 @@ const About = () => {
           borderRadius="1.9rem"
           w="25%"
           className="abt-box"
+          data-aos="zoom-in"
         >
           <Box
             display="flex"
@@ -156,6 +164,7 @@ const About = () => {
           borderRadius="1.9rem"
           w="25%"
           className="abt-box"
+          data-aos="zoom-in"
         >
           <Box
             display="flex"
@@ -197,6 +206,7 @@ const About = () => {
           borderRadius="1.9rem"
           w="25%"
           className="abt-box"
+          data-aos="zoom-in"
         >
           <Box
             display="flex"

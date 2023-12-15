@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Box, Text, Image, Input, Button } from "@chakra-ui/react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Footer = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
-    <Box className="footer" borderTopRadius="1.5rem">
+    <Box className="footer" borderTopRadius="1.5rem" data-aos="fade-up">
       <Box
         display="flex"
         justifyContent="space-evenly"

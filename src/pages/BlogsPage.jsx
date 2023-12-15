@@ -18,6 +18,8 @@ import Layout from "../components/layout/Layout";
 import { Link } from "react-router-dom";
 import "../styles/blogs.css";
 // import axios from "axios";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const BlogsPage = () => {
   const [blogs, setBlogs] = useState([]);
@@ -35,7 +37,7 @@ const BlogsPage = () => {
 
   useEffect(() => {
     getAllBlogs();
-    // console.log(blogs);
+    Aos.init();
   }, []);
 
   const filteredBlogs = blogs?.filter((blog) =>
@@ -119,16 +121,19 @@ const BlogsPage = () => {
                   >
                     {blogs[0]?.date}
                   </Text>
-                  <Text
-                    color="#3B3B3B"
-                    fontFamily="Bebas Neue"
-                    fontWeight="400"
-                    lineHeight="normal"
-                    fontSize="2.5rem"
-                    className="bpg-1-t"
-                  >
-                    {blogs[0]?.title}
-                  </Text>
+                  <Link to={`/blogs/${blogs[0]?.id}`}>
+                    <Text
+                      color="#3B3B3B"
+                      fontFamily="Bebas Neue"
+                      fontWeight="400"
+                      lineHeight="normal"
+                      fontSize="2.5rem"
+                      className="bpg-1-t"
+                    >
+                      {blogs[0]?.title}
+                    </Text>
+                  </Link>
+
                   <Text
                     color="#3B3B3B"
                     fontFamily="Montserrat"
@@ -161,6 +166,7 @@ const BlogsPage = () => {
                   boxShadow="10px 10px 25px 0px rgba(22, 27, 29, 0.25)"
                   key={b?.id}
                   zIndex="10"
+                  data-aos="zoom-in"
                 >
                   <CardBody p="18px" pb="50px" zIndex="10" className="card-2">
                     <Image
@@ -180,16 +186,19 @@ const BlogsPage = () => {
                       >
                         {b?.date}
                       </Text>
-                      <Heading
-                        textTransform="uppercase"
-                        color="#3B3B3B"
-                        fontFamily="Bebas Neue"
-                        fontWeight="400"
-                        lineHeight="100%"
-                        className="bpg-2-t"
-                      >
-                        {b?.title}
-                      </Heading>
+                      <Link to={`/blogs/${b?.id}`}>
+                        <Heading
+                          textTransform="uppercase"
+                          color="#3B3B3B"
+                          fontFamily="Bebas Neue"
+                          fontWeight="400"
+                          lineHeight="100%"
+                          className="bpg-2-t"
+                        >
+                          {b?.title}
+                        </Heading>
+                      </Link>
+
                       <Text
                         color="#3B3B3B"
                         fontFamily="Montserrat"
@@ -261,16 +270,19 @@ const BlogsPage = () => {
                             >
                               {b?.date}
                             </Text>
-                            <Heading
-                              textTransform="uppercase"
-                              color="#3B3B3B"
-                              fontFamily="Bebas Neue"
-                              fontWeight="400"
-                              lineHeight="100%"
-                              className="bpg-2-t"
-                            >
-                              {b?.title}
-                            </Heading>
+                            <Link to={`/blogs/${b?.id}`}>
+                              <Heading
+                                textTransform="uppercase"
+                                color="#3B3B3B"
+                                fontFamily="Bebas Neue"
+                                fontWeight="400"
+                                lineHeight="100%"
+                                className="bpg-2-t"
+                              >
+                                {b?.title}
+                              </Heading>
+                            </Link>
+
                             <Text
                               color="#3B3B3B"
                               fontFamily="Montserrat"

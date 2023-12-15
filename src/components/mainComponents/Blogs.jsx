@@ -12,6 +12,8 @@ import {
 } from "@chakra-ui/react";
 import "../../styles/blogs.css";
 // import { blogs } from "../../data/blogData";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
@@ -27,7 +29,7 @@ const Blogs = () => {
 
   useEffect(() => {
     getAllBlogs();
-    // console.log(blogs);
+    Aos.init();
   }, []);
 
   const handleClick = () => {
@@ -54,6 +56,7 @@ const Blogs = () => {
           lineHeight="normal"
           fontSize="4.5rem"
           className="all-title"
+          data-aos="zoom-out-right"
         >
           BLOGS
         </Text>
@@ -68,6 +71,7 @@ const Blogs = () => {
           boxShadow="5.236px 5.76px 15.708px 0px rgba(0, 0, 0, 0.40)"
           onClick={handleClick}
           zIndex="10"
+          data-aos="zoom-out-left"
         >
           VIEW ALL BLOGS{" "}
           <span>
@@ -115,6 +119,7 @@ const Blogs = () => {
             boxShadow="10px 10px 25px 0px rgba(22, 27, 29, 0.25)"
             key={b.id}
             zIndex="10"
+            data-aos="zoom-in"
           >
             <CardBody p="18px">
               <Image
@@ -173,6 +178,7 @@ const Blogs = () => {
               key={b.id}
               zIndex="10"
               className="card"
+              data-aos="zoom-in"
             >
               <CardBody className="card-body" p="18px">
                 <Image

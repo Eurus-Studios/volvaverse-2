@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Box, Text } from "@chakra-ui/react";
 import "../../styles/roadmap.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Roadmap = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <Box minH="100dvh" px="100px" pt="70px" mb="150px" className="all-cnt rd">
       <Box position="relative">
@@ -13,6 +18,7 @@ const Roadmap = () => {
           lineHeight="normal"
           fontSize="4.5rem"
           className="all-title"
+          data-aos="zoom-out-right"
         >
           ROADMAP
         </Text>
@@ -94,6 +100,7 @@ const Roadmap = () => {
               top="140px"
               left="120px"
               className="rd-ab-cnt"
+              data-aos="fade-left"
             >
               <Text
                 textTransform="uppercase"
@@ -144,6 +151,7 @@ const Roadmap = () => {
               top="140px"
               left="120px"
               className="rd-ab-cnt"
+              data-aos="fade-left"
             >
               <Text
                 textTransform="uppercase"
@@ -193,6 +201,7 @@ const Roadmap = () => {
               top="140px"
               left="120px"
               className="rd-ab-cnt"
+              data-aos="fade-left"
             >
               <Text
                 textTransform="uppercase"
@@ -242,6 +251,7 @@ const Roadmap = () => {
               top="140px"
               left="120px"
               className="rd-ab-cnt"
+              data-aos="fade-left"
             >
               <Text
                 textTransform="uppercase"

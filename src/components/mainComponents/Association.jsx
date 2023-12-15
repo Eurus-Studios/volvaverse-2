@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Box, Text, Image } from "@chakra-ui/react";
 import "../../styles/association.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Association = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <Box
       pt="70px"
@@ -19,6 +24,7 @@ const Association = () => {
         fontSize="4.5rem"
         zIndex="10"
         className="all-title"
+        data-aos="zoom-out-right"
       >
         ASSOCIATIONS
       </Text>
@@ -42,6 +48,8 @@ const Association = () => {
           boxShadow="-8.86335px -7.38613px 18.4653px #fafbff, 7.38613px 7.38613px 18.4653px #161b1d40;"
           zIndex="10"
           className="as-box"
+          p="10px"
+          data-aos="zoom-in"
         >
           <Box>
             <Box
@@ -78,6 +86,8 @@ const Association = () => {
           boxShadow="-8.86335px -7.38613px 18.4653px #fafbff, 7.38613px 7.38613px 18.4653px #161b1d40;"
           zIndex="10"
           className="as-box"
+          p="10px"
+          data-aos="zoom-in"
         >
           <Box>
             <Box
@@ -114,6 +124,8 @@ const Association = () => {
           boxShadow="-8.86335px -7.38613px 18.4653px #fafbff, 7.38613px 7.38613px 18.4653px #161b1d40;"
           zIndex="10"
           className="as-box"
+          p="10px"
+          data-aos="zoom-in"
         >
           <Box>
             <Box
@@ -150,6 +162,8 @@ const Association = () => {
           boxShadow="-8.86335px -7.38613px 18.4653px #fafbff, 7.38613px 7.38613px 18.4653px #161b1d40;"
           zIndex="10"
           className="as-box"
+          p="10px"
+          data-aos="zoom-in"
         >
           <Box h="100%" className="as-box-4">
             <Box
@@ -186,6 +200,8 @@ const Association = () => {
           boxShadow="-8.86335px -7.38613px 18.4653px #fafbff, 7.38613px 7.38613px 18.4653px #161b1d40;"
           zIndex="10"
           className="as-box"
+          p="10px"
+          data-aos="zoom-in"
         >
           <Box className="as-box-5">
             <Box
@@ -222,6 +238,8 @@ const Association = () => {
           boxShadow="-8.86335px -7.38613px 18.4653px #fafbff, 7.38613px 7.38613px 18.4653px #161b1d40;"
           zIndex="10"
           className="as-box"
+          p="10px"
+          data-aos="zoom-in"
         >
           <Box h="100%" className="as-box-6">
             <Box

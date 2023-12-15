@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Box, Text, Image, Stack } from "@chakra-ui/react";
 import { team } from "../../data/teamData";
 import "../../styles/team.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Team = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <Box
       minH="100dvh"
@@ -21,6 +26,7 @@ const Team = () => {
           fontSize="4.5rem"
           zIndex="10"
           className="all-title"
+          data-aos="zoom-out-right"
         >
           MEET THE TEAM
         </Text>
@@ -50,8 +56,41 @@ const Team = () => {
                 alignItems="center"
                 zIndex="10"
                 className="tm-box"
+                position="relative"
+                data-aos="zoom-in"
               >
                 <Image src={t.image} h="15rem" w="16rem" zIndex="10" />
+                <Box className="tm-hover" p="10px">
+                  <Text
+                    color="#ECF0F3"
+                    fontFamily="Bebas Neue"
+                    fontWeight="400"
+                    lineHeight="normal"
+                    textTransform="uppercase"
+                    fontSize="1.5rem"
+                    my="10px"
+                  >
+                    {t.name}
+                  </Text>
+                  <Text
+                    color="#ECF0F3"
+                    fontFamily="Montserrat"
+                    fontWeight="300"
+                    lineHeight="normal"
+                    fontSize="1rem"
+                    mb="10px"
+                  >
+                    {t.moto}
+                  </Text>
+                  <Box display="flex" gap="5px">
+                    <a href={t.linkedIm} target="_blank">
+                      <Image h="2.5rem" src="/images/linkedIn.png" />
+                    </a>
+                    <a href={t.twitter} target="_blank">
+                      <Image h="2.5rem" src="/images/twitter.png" />
+                    </a>
+                  </Box>
+                </Box>
               </Box>
               <Box ps="10px" zIndex="10" className="tm-txt-cnt">
                 <Text

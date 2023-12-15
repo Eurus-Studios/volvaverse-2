@@ -11,6 +11,7 @@ import Blogs from "../components/mainComponents/Blogs";
 import Docs from "../components/mainComponents/Docs";
 import Community from "../components/mainComponents/Community";
 import Roadmap from "../components/mainComponents/Roadmap";
+import Volastore from "../components/mainComponents/Volastore";
 
 const Main = () => {
   return (
@@ -21,6 +22,10 @@ const Main = () => {
 
       <section id="about">
         <About />
+      </section>
+
+      <section id="volastore">
+        <Volastore />
       </section>
 
       <section id="roadmap">

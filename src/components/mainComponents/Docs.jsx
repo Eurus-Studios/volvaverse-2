@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Box, Text } from "@chakra-ui/react";
 import "../../styles/docs.css";
 import { docs } from "../../data/docsData";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Docs = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <Box
       mb="70px"
@@ -20,6 +25,7 @@ const Docs = () => {
           lineHeight="normal"
           fontSize="4.5rem"
           className="all-title"
+          data-aos="zoom-out-right"
         >
           DOCS
         </Text>
@@ -42,6 +48,7 @@ const Docs = () => {
               zIndex="10"
               key={d.id}
               className="docs-card"
+              data-aos="zoom-in"
             >
               <Text
                 textTransform="uppercase"
