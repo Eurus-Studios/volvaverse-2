@@ -1,6 +1,6 @@
 .main {
     padding-top: 10px;
-    overflow: hidden;
+    overflow: hidden !important;
 }
 
 .child {
@@ -10,88 +10,7 @@
 /* ui */
 
 .layout {
-    /* height: 120vh; */
     width: 100vw;
-    position: relative;
-}
-
-.l-1 {
-    background: #F88AB0;
-    filter: blur(140px);
-    height: 300px;
-    width: 300px;
-    border-radius: 50%;
-    position: absolute;
-    right: 20px;
-    top: 90px;
-}
-
-.l-2 {
-    background: #6B92E5;
-    filter: blur(150px);
-    height: 250px;
-    width: 250px;
-    border-radius: 50%;
-    position: absolute;
-    left: 15%;
-    top: -140px;
-}
-
-.l-3 {
-    background: rgba(107, 146, 229, 0.6);
-    filter: blur(1850px);
-    height: 1050px;
-    width: 1050px;
-    border-radius: 50%;
-    position: absolute;
-    right: -500px;
-    bottom: 140px;
-}
-
-.l-4 {
-    background: #F88AB0;
-    filter: blur(1850px);
-    height: 750px;
-    width: 750px;
-    border-radius: 50%;
-    position: absolute;
-    right: -200px;
-    bottom: 2300px;
-    opacity: .7;
-}
-
-.l-5 {
-    background: #6B92E5;
-    filter: blur(200px);
-    height: 500px;
-    width: 500px;
-    border-radius: 50%;
-    position: absolute;
-    left: -200px;
-    bottom: 3750px;
-}
-
-.l-6 {
-    background: #F88AB0;
-    filter: blur(1500px);
-    height: 900px;
-    width: 900px;
-    border-radius: 50%;
-    position: absolute;
-    right: -350px;
-    bottom: 4400px;
-    opacity: .6;
-}
-
-.l-7 {
-    background: #6B92E5;
-    filter: blur(250px);
-    height: 450px;
-    width: 450px;
-    border-radius: 50%;
-    position: absolute;
-    left: -100px;
-    bottom: 1800px;
 }
 
 /* header */
@@ -108,7 +27,7 @@
 .header-bg {
     position: fixed;
     top: 0%;
-    width: 100%;
+    width: 100dvw;
     background: linear-gradient(180deg, rgb(247, 168, 195) 0%, rgb(169, 153, 219) 100%);
     background-size: 100% 200%;
     animation: bg 1.5s ease forwards;

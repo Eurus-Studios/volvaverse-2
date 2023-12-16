@@ -61,7 +61,7 @@ const Faq = () => {
           </Text>
         </Box>
       </Box>
-      <Box mt="50px">
+      <Box mt="50px" data-aos="fade-in">
         <Accordion allowMultiple>
           <AccordionItem
             borderTop="4px solid rgba(172, 172, 172, 0.70)"

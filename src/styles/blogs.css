@@ -34,6 +34,10 @@
     box-shadow: none !important;
 }
 
+.rd-link {
+    z-index: 10 !important;
+}
+
 @media (max-width: 1224px) {
     .bpg-2-dt {
         font-size: .8rem !important;

@@ -63,6 +63,7 @@ const BlogsPage = () => {
           alignItems="center"
           mb="50px"
           className="src-cnt"
+          zIndex="10"
         >
           <Link to="/" className="back">
             <span>{"<"}</span>BACK
@@ -121,7 +122,7 @@ const BlogsPage = () => {
                   >
                     {blogs[0]?.date}
                   </Text>
-                  <Link to={`/blogs/${blogs[0]?.id}`}>
+                  <Link to={`/blogs/${blogs[0]?.id}`} className="rd-link">
                     <Text
                       color="#3B3B3B"
                       fontFamily="Bebas Neue"
@@ -129,6 +130,7 @@ const BlogsPage = () => {
                       lineHeight="normal"
                       fontSize="2.5rem"
                       className="bpg-1-t"
+                      zIndex="10"
                     >
                       {blogs[0]?.title}
                     </Text>

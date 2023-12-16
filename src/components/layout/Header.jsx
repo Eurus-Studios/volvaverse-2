@@ -151,6 +151,9 @@ const Header = () => {
             <a href="/#about" className="ph" onClick={onClose}>
               ABOUT US
             </a>
+            <a href="/#volastore" onClick={onClose}>
+              VOLASTORE
+            </a>
             <a href="/#roadmap" className="ph" onClick={onClose}>
               ROADMAP
             </a>

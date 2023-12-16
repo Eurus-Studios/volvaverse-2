@@ -15,26 +15,42 @@ import "../../styles/blogs.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-const Volastore = () => {
-  const [blogs, setBlogs] = useState([]);
+import "../../styles/volastore.css";
+import FourDotsSlideAnimation from "./FourDotsSlideAnimation";
 
-  const getAllBlogs = async () => {
-    const data = await fetch("https://backend.volaverse.com/block/blog");
+const ProductSlider = ({ products }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-    const value = await data.json();
-    const keys = Object.keys(value);
-    setBlogs(value[keys]);
-    // console.log(value[keys]);
+  const nextProduct = () => {
+    setCurrentIndex((currentIndex + 1) % products.length);
+  };
+
+  const prevProduct = () => {
+    setCurrentIndex((currentIndex - 1 + products.length) % products.length);
+  };
+
+  const handleDotClick = (index) => {
+    setCurrentIndex(index);
+  };
+
+  const getNextProducts = () => {
+    const nextProductIndices = [
+      (currentIndex + 1) % products.length,
+      (currentIndex + 2) % products.length,
+      (currentIndex + 3) % products.length,
+    ];
+    return nextProductIndices.map((index) => products[index]);
+  };
+
+  const handleClick = () => {
+    window.open(products[currentIndex].link, "_blank");
   };
 
   useEffect(() => {
-    getAllBlogs();
+    // getAllProducts()
     Aos.init();
   }, []);
 
-  const handleClick = () => {
-    window.open("/blogs", "_blank");
-  };
   return (
     <Box
       minH="100dvh"
@@ -43,35 +59,37 @@ const Volastore = () => {
       zIndex="10"
       className="all-cnt blogs-main"
     >
+      <Text
+        color="#3D3D3D"
+        fontFamily="Bebas Neue"
+        fontWeight="400"
+        lineHeight="normal"
+        fontSize="4.5rem"
+        className="all-title"
+        data-aos="zoom-out-right"
+      >
+        VOLASTORE
+      </Text>
+
       <Box
         display="flex"
         justifyContent="space-between"
         alignItems="center"
         zIndex="10"
       >
-        <Box>
-          <Text
-            color="#3D3D3D"
-            fontFamily="Bebas Neue"
-            fontWeight="400"
-            lineHeight="normal"
-            fontSize="4.5rem"
-            className="all-title"
-            data-aos="zoom-out-right"
-          >
-            VOLASTORE
-          </Text>
-          <Text
-            fontFamily="Montserrat"
-            fontWeight="400"
-            lineHeight="normal"
-            color="#3D3D3D"
-            maxW="70%"
-          >
-            Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-            vulputate libero et velit interdum, ac aliquet odio mattis.
-          </Text>
-        </Box>
+        <Text
+          fontFamily="Montserrat"
+          fontWeight="400"
+          lineHeight="normal"
+          color="#3D3D3D"
+          maxW="70%"
+          data-aos="zoom-out-right"
+          className="vola-p"
+        >
+          Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+          vulputate libero et velit interdum, ac aliquet odio mattis.
+        </Text>
+
         <Button
           bg="#745AC3"
           color="#FFF"
@@ -79,7 +97,7 @@ const Volastore = () => {
           fontWeight="400"
           fontSize="1.2rem"
           lineHeight="normal"
-          className="blogs-btn"
+          className="blogs-btn v-btn"
           boxShadow="5.236px 5.76px 15.708px 0px rgba(0, 0, 0, 0.40)"
           onClick={handleClick}
           zIndex="10"
@@ -115,127 +133,231 @@ const Volastore = () => {
         </Button>
       </Box>
 
-      {/* blog-cards for large devices */}
+      {/* products */}
+
       <Box
-        display="flex"
-        justifyContent="space-between"
-        mt="30px"
+        display="grid"
+        gridTemplateColumns="1fr 2fr"
+        gap="40px"
+        mt="40px"
+        className="vola-st"
         zIndex="10"
-        className="pc"
       >
-        {blogs.slice(0, 3).map((b) => (
-          <Card
-            maxW="sm"
-            borderRadius="1.9rem"
-            bg="#ECF0F3"
-            boxShadow="10px 10px 25px 0px rgba(22, 27, 29, 0.25)"
-            key={b.id}
+        <Box
+          borderRadius="1rem"
+          bg="linear-gradient(141deg, rgba(116, 90, 195, 0.36) 1.09%, rgba(236, 240, 243, 0.00) 99.96%)"
+          boxShadow="6.895px 6.895px 17.237px 0px rgba(59, 59, 59, 0.70), -8.274px -6.895px 17.237px 0px rgba(255, 255, 255, 0.80)"
+          p="20px"
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          data-aos="zoom-in"
+          zIndex="10"
+        >
+          <Image
+            h="300px"
+            src={products[currentIndex].img}
+            alt={products[currentIndex].name}
             zIndex="10"
-            data-aos="zoom-in"
+          />
+        </Box>
+        <Box zIndex="10">
+          <Text
+            color="#313131"
+            fontFamily="Bebas Neue"
+            fontWeight="400"
+            lineHeight="normal"
+            textTransform="uppercase"
+            fontSize="2.5rem"
+            className="p-name"
+            zIndex="10"
           >
-            <CardBody p="18px">
-              <Image
-                src={b.content[0].img}
-                alt="Green double couch with wooden legs"
-                borderTopRadius="1.7rem"
-                h="50%"
-                w="100%"
-              />
-              <Stack mt="15px" spacing="3">
-                <Text
-                  color="#3D3D3D"
-                  fontFamily="Inter"
-                  fontWeight="600"
-                  lineHeight="16px"
+            {products[currentIndex].name}
+          </Text>
+          <Text
+            color="#313131"
+            fontFamily="Montserrat"
+            fontWeight="500"
+            lineHeight="normal"
+            textTransform="uppercase"
+            fontSize="1.1rem"
+            className="p-price"
+            zIndex="10"
+          >
+            {"$"}
+            {products[currentIndex].price}
+          </Text>
+          <Box
+            display="flex"
+            justifyContent="space-between"
+            className="vola-btns"
+            zIndex="10"
+          >
+            <Button
+              fontFamily="Bebas Neue"
+              fontWeight="400"
+              fontSize="1.1rem"
+              background="linear-gradient(90deg,#745AC3 66.98%,rgba(248,138,176,.8) 100%)"
+              boxShadow="8.75205px 9.62725px 26.2561px #0006"
+              color="white"
+              padding="5px 12px"
+              className="vola-btn"
+              onClick={handleClick}
+              zIndex="10"
+              mt="10px"
+              mb="20px"
+            >
+              VIEW IN VOLASTORE
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="26"
+                  height="15"
+                  viewBox="0 0 26 20"
+                  fill="none"
                 >
-                  {b.date}
-                </Text>
-                <Heading
-                  textTransform="uppercase"
-                  color="#3B3B3B"
-                  fontFamily="Bebas Neue"
-                  fontWeight="400"
-                  lineHeight="100%"
-                >
-                  {b.title}
-                </Heading>
-                <Text
-                  color="#3B3B3B"
-                  fontFamily="Montserrat"
-                  fontWeight="300"
-                  lineHeight="110%"
-                >
-                  {b.content[0].desc.substring(0, 200)}...
-                </Text>
-              </Stack>
-            </CardBody>
-          </Card>
-        ))}
+                  <path
+                    d="M16.5024 18.377L24.8799 9.99949L16.5024 1.62199"
+                    stroke="white"
+                    stroke-width="1.97201"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M1.41717 9.99902L24.645 9.99902"
+                    stroke="white"
+                    stroke-width="1.97201"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </Button>
+            <Box display="flex" zIndex="10">
+              <Button
+                bg="transparent"
+                p="0"
+                className="prev-btn"
+                onClick={prevProduct}
+                zIndex="10"
+              >
+                <Image h="1.5rem" src="/images/prev.png" zIndex="10" />
+              </Button>
+              <Button
+                bg="transparent"
+                p="0"
+                className="prev-btn"
+                onClick={nextProduct}
+                zIndex="10"
+              >
+                <Image
+                  transform="rotate(180deg)"
+                  h="1.5rem"
+                  src="/images/prev.png"
+                  zIndex="10"
+                />
+              </Button>
+            </Box>
+          </Box>
+
+          <Box
+            display="flex"
+            className="pc"
+            zIndex="10"
+            justifyContent="space-between"
+          >
+            {getNextProducts().map((p) => (
+              <Box
+                key={p.id}
+                bg="linear-gradient(135deg, rgba(236, 240, 243, 0.00) -0.1%, rgba(248, 138, 176, 0.35) 99.91%)"
+                boxShadow="6.813px 6.813px 17.032px 0px rgba(59, 59, 59, 0.70), -8.175px -6.813px 17.032px 0px rgba(255, 255, 255, 0.80)"
+                borderRadius="1rem"
+                zIndex="10"
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+                h="220px"
+                w="220px"
+                data-aos="zoom-in"
+              >
+                <Image h="85%" src={p.img} alt={p.name} zIndex="10" />
+              </Box>
+            ))}
+          </Box>
+        </Box>
       </Box>
 
-      {/* blog-cards for small devices */}
-      <div className="ph">
-        <Box
-          display="flex"
-          justifyContent="space-between"
-          mt="30px"
-          zIndex="10"
-          gap="8px"
-        >
-          {blogs.slice(0, 2).map((b) => (
-            <Card
-              borderRadius="1.9rem"
-              bg="#ECF0F3"
-              boxShadow="10px 10px 25px 0px rgba(22, 27, 29, 0.25)"
-              key={b.id}
+      <Box className="ph" mt="20px">
+        <Box display="flex" zIndex="10" justifyContent="space-between">
+          {getNextProducts().map((p) => (
+            <Box
+              key={p.id}
+              bg="linear-gradient(135deg, rgba(236, 240, 243, 0.00) -0.1%, rgba(248, 138, 176, 0.35) 99.91%)"
+              boxShadow="6.813px 6.813px 17.032px 0px rgba(59, 59, 59, 0.70), -8.175px -6.813px 17.032px 0px rgba(255, 255, 255, 0.80)"
+              borderRadius="1rem"
               zIndex="10"
-              className="card"
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              h="220px"
+              w="220px"
               data-aos="zoom-in"
+              className="prs"
             >
-              <CardBody className="card-body" p="18px">
-                <Image
-                  src={b.content[0].img}
-                  alt="Green double couch with wooden legs"
-                  borderTopRadius="1.7rem"
-                  h="50%"
-                  w="100%"
-                />
-                <Stack mt="15px" spacing="3" className="blogs-txt">
-                  <Text
-                    color="#3D3D3D"
-                    fontFamily="Inter"
-                    fontWeight="600"
-                    lineHeight="16px"
-                    className="date"
-                  >
-                    {b.date}
-                  </Text>
-                  <Heading
-                    textTransform="uppercase"
-                    color="#3B3B3B"
-                    fontFamily="Bebas Neue"
-                    fontWeight="400"
-                    lineHeight="100%"
-                    className="card-t"
-                  >
-                    {b.title}
-                  </Heading>
-                  <Text
-                    color="#3B3B3B"
-                    fontFamily="Montserrat"
-                    fontWeight="300"
-                    lineHeight="110%"
-                    className="card-d"
-                  >
-                    {b.content[0].desc.substring(0, 100)}...
-                  </Text>
-                </Stack>
-              </CardBody>
-            </Card>
+              <Image h="85%" src={p.img} alt={p.name} />
+            </Box>
           ))}
         </Box>
-      </div>
+      </Box>
+
+      <Box display="flex" justifyContent="end" className="dots">
+        <FourDotsSlideAnimation
+          currentIndex={currentIndex}
+          onDotClick={handleDotClick}
+        />
+      </Box>
     </Box>
+  );
+};
+
+const Volastore = () => {
+  const products = [
+    {
+      id: 1,
+      name: "dress boy#1",
+      price: "4.50",
+      img: "/images/pr1.png",
+      link: "https://colorlib.com/wp/template/jackco/",
+    },
+    {
+      id: 2,
+      name: "dress boy#2",
+      price: "4.00",
+      img: "/images/pr2.png",
+      link: "abc",
+    },
+    {
+      id: 3,
+      name: "dress boy#3",
+      price: "3.75",
+      img: "/images/pr3.png",
+      link: "abc",
+    },
+    {
+      id: 4,
+      name: "dress boy#4",
+      price: "5.89",
+      img: "/images/pr4.png",
+      link: "abc",
+    },
+  ];
+
+  return (
+    <div>
+      <ProductSlider products={products} />
+    </div>
   );
 };
 
