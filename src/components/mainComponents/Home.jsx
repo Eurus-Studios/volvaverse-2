@@ -77,7 +77,11 @@ const Home = () => {
         className="home-sc-links"
         zIndex="10"
       >
-        <a href="https://twitter.com/Volaverse" target="_blank">
+        <a
+          className="slide-in-right1"
+          href="https://twitter.com/Volaverse"
+          target="_blank"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="28"
@@ -94,6 +98,7 @@ const Home = () => {
         <a
           href="https://www.instagram.com/volaverse?igshid=YmMyMTA2M2Y%3D"
           target="_blank"
+          className="slide-in-right2"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -108,7 +113,11 @@ const Home = () => {
             />
           </svg>
         </a>
-        <a href="https://www.youtube.com/@volaverse123" target="_blank">
+        <a
+          href="https://www.youtube.com/@volaverse123"
+          target="_blank"
+          className="slide-in-right3"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="25"

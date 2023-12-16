@@ -9,6 +9,7 @@ import {
   ModalCloseButton,
   useDisclosure,
 } from "@chakra-ui/react";
+import { HashLink } from "react-router-hash-link";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -43,13 +44,13 @@ const Header = () => {
         className={`header pc ${isScrolled ? "header-bg" : ""}`}
       >
         <Box display="flex" justifyContent="center">
-          <a href="/#about">ABOUT US</a>
+          <HashLink to="/#about">ABOUT US</HashLink>
         </Box>
         <Box display="flex" justifyContent="center">
-          <a href="/#roadmap">ROADMAP</a>
+          <HashLink to="/#roadmap">ROADMAP</HashLink>
         </Box>
         <Box display="flex" justifyContent="center">
-          <a href="/#team">TEAM</a>
+          <HashLink to="/#team">TEAM</HashLink>
         </Box>
         <Box display="flex" justifyContent="center">
           <a href="/">
@@ -62,10 +63,10 @@ const Header = () => {
           </a>
         </Box>
         <Box display="flex" justifyContent="center">
-          <a href="/#faq">FAQ</a>
+          <HashLink to="/#faq">FAQ</HashLink>
         </Box>
         <Box display="flex" justifyContent="center">
-          <a href="/#community">COMMUNITY</a>
+          <HashLink to="/#community">COMMUNITY</HashLink>
         </Box>
         <Box display="flex" justifyContent="center">
           <a onClick={onOpen} className="toggle">
@@ -148,36 +149,36 @@ const Header = () => {
             className="toggle-links"
             gap="20px"
           >
-            <a href="/#about" className="ph" onClick={onClose}>
+            <HashLink to="/#about" className="ph" onClick={onClose}>
               ABOUT US
-            </a>
-            <a href="/#volastore" onClick={onClose}>
+            </HashLink>
+            <HashLink to="/#volastore" onClick={onClose}>
               VOLASTORE
-            </a>
-            <a href="/#roadmap" className="ph" onClick={onClose}>
+            </HashLink>
+            <HashLink to="/#roadmap" className="ph" onClick={onClose}>
               ROADMAP
-            </a>
-            <a href="/#team" className="ph" onClick={onClose}>
+            </HashLink>
+            <HashLink to="/#team" className="ph" onClick={onClose}>
               TEAM
-            </a>
-            <a href="/#association" onClick={onClose}>
+            </HashLink>
+            <HashLink to="/#association" onClick={onClose}>
               ASSOCIATIONS
-            </a>
-            <a href="/#docs" onClick={onClose}>
+            </HashLink>
+            <HashLink to="/#docs" onClick={onClose}>
               DOCS
-            </a>
-            <a href="/#blogs" onClick={onClose}>
+            </HashLink>
+            <HashLink to="/#blogs" onClick={onClose}>
               BLOGS
-            </a>
-            <a href="/#faq" className="ph" onClick={onClose}>
+            </HashLink>
+            <HashLink to="/#faq" className="ph" onClick={onClose}>
               FAQ
-            </a>
-            <a href="/#community" className="ph" onClick={onClose}>
+            </HashLink>
+            <HashLink to="/#community" className="ph" onClick={onClose}>
               COMMUNITY
-            </a>
-            <a href="/#join" onClick={onClose}>
+            </HashLink>
+            <HashLink to="/#join" onClick={onClose}>
               JOIN US
-            </a>
+            </HashLink>
           </ModalBody>
         </ModalContent>
       </Modal>

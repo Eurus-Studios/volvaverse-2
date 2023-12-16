@@ -11,7 +11,15 @@
     top: 48%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
 
+.cm-circle {
+    transition: .3s;
+}
+
+.cm-circle:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 @media (max-width: 1400px) {

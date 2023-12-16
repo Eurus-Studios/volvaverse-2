@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   Box,
   Text,
@@ -138,15 +138,18 @@ const Blogs = () => {
                 >
                   {b.date}
                 </Text>
-                <Heading
-                  textTransform="uppercase"
-                  color="#3B3B3B"
-                  fontFamily="Bebas Neue"
-                  fontWeight="400"
-                  lineHeight="100%"
-                >
-                  {b.title}
-                </Heading>
+                <a href={`/blogs/${b?.id}`} target="_blank">
+                  <Heading
+                    textTransform="uppercase"
+                    color="#3B3B3B"
+                    fontFamily="Bebas Neue"
+                    fontWeight="400"
+                    lineHeight="100%"
+                  >
+                    {b.title}
+                  </Heading>
+                </a>
+
                 <Text
                   color="#3B3B3B"
                   fontFamily="Montserrat"
@@ -198,16 +201,18 @@ const Blogs = () => {
                   >
                     {b.date}
                   </Text>
-                  <Heading
-                    textTransform="uppercase"
-                    color="#3B3B3B"
-                    fontFamily="Bebas Neue"
-                    fontWeight="400"
-                    lineHeight="100%"
-                    className="card-t"
-                  >
-                    {b.title}
-                  </Heading>
+                  <a href={`/blogs/${b?.id}`} target="_blank">
+                    <Heading
+                      textTransform="uppercase"
+                      color="#3B3B3B"
+                      fontFamily="Bebas Neue"
+                      fontWeight="400"
+                      lineHeight="100%"
+                      className="card-t"
+                    >
+                      {b.title}
+                    </Heading>
+                  </a>
                   <Text
                     color="#3B3B3B"
                     fontFamily="Montserrat"
