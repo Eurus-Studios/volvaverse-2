@@ -19,13 +19,14 @@ const About = () => {
           <Box
             position="absolute"
             zIndex="15"
-            left="30px"
+            left="50%"
+            transform="translate(-50%, 0)"
             bottom="40px"
             className="abt-txt"
-            padding="10px"
+            padding="20px 30px"
             bg="#00000080"
             border="0.5px rgba(255,255,255,.4) solid"
-            w="95%"
+            w="85%"
             backdropFilter="blur(15px)"
             borderRadius="1.2rem"
           >
@@ -45,8 +46,7 @@ const About = () => {
               fontFamily="Montserrat"
               fontWeight="500"
               lineHeight="normal"
-              width="85%"
-              fontSize="1.2rem"
+              fontSize=".9rem"
               className="abt-d"
               zIndex="15"
             >
