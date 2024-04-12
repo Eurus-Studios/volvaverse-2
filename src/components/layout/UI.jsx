@@ -4,7 +4,7 @@ import "../../styles/ui.css";
 
 const UI = () => {
   return (
-    <Box position="relative" className="pc">
+    <Box position="relative" w="100dvw" h="100%" overflow="hidden">
       <div className="l-1"></div>
       <div className="l-2"></div>
       <div className="l-3"></div>

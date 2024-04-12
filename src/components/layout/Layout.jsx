@@ -4,6 +4,7 @@ import Header from "./Header";
 import { Helmet } from "react-helmet";
 import "../../styles/layout.css";
 import UI from "./UI";
+import { Box } from "@chakra-ui/react";
 
 const Layout = ({ children, title, description, keywords, author }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,6 +27,9 @@ const Layout = ({ children, title, description, keywords, author }) => {
 
   return (
     <div className="main">
+      <Box position="absolute" h="100%" w="100%" overflow="hidden">
+        <UI />
+      </Box>
       <Helmet>
         <meta charSet="utf-8" />
         <meta name="description" content={description} />
@@ -33,11 +37,10 @@ const Layout = ({ children, title, description, keywords, author }) => {
         <meta name="author" content={author} />
         <title>{title}</title>
       </Helmet>
-      <div className={`${isScrolled ? "header-ht" : ""}`}></div>
-      <Header />
+      <div className={`${isScrolled ? "header-ht" : "header-m"}`}></div>
 
+      <Header />
       <main className="layout">
-        <UI />
         <div className="child">{children}</div>
       </main>
       <Footer />

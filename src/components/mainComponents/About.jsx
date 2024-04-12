@@ -8,6 +8,7 @@ const About = () => {
     <>
       <Box
         minH="100dvh"
+        w="100dvw"
         display="flex"
         justifyContent="center"
         alignItems="center"

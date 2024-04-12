@@ -19,11 +19,16 @@ const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
 
   const getAllBlogs = async () => {
-    const data = await fetch("https://backend.volaverse.com/block/blog");
+    try {
+      const data = await fetch("https://backend.volaverse.com/block/blog");
 
-    const value = await data.json();
-    const keys = Object.keys(value);
-    setBlogs(value[keys]);
+      const value = await data.json();
+      const keys = Object.keys(value);
+      setBlogs(value[keys]);
+    } catch (error) {
+      // window.location.replace("/");
+      alert("No iternet connection!");
+    }
     // console.log(value[keys]);
   };
 

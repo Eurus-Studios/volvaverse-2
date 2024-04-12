@@ -12,10 +12,12 @@ body {
   /* z-index: -10; */
   max-width: 100dvw;
   height: 100%;
+  width: 100%;
   /* overflow: hidden; */
   /* overflow-x: hidden; */
   /* overflow-y: scroll; */
   /* cursor: none !important; */
+  background: #ecf0f3;
 }
 
 body::-webkit-scrollbar {
@@ -25,8 +27,8 @@ body::-webkit-scrollbar {
 #root {
   width: 100%;
   height: 100%;
-  background: var(--backgroundColor);
-  /* overflow: hidden; */
+  /* background: yellow; */
+  background: #ecf0f3;
 }
 
 #root canvas {

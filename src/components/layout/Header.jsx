@@ -8,6 +8,7 @@ import {
   ModalBody,
   ModalCloseButton,
   useDisclosure,
+  Button,
 } from "@chakra-ui/react";
 import { HashLink } from "react-router-hash-link";
 
@@ -41,6 +42,10 @@ const Header = () => {
         p="5px 25px 5px 25px"
         borderBottom="1px solid #3B3B3B"
         zIndex="100"
+        // position="fixed"
+        // background="transparent"
+        top="0"
+        width="100dvw"
         className={`header pc ${isScrolled ? "header-bg" : ""}`}
       >
         <Box display="flex" justifyContent="center">
@@ -103,10 +108,11 @@ const Header = () => {
           p="5px 25px 5px 25px"
           borderBottom="1px solid #3B3B3B"
           zIndex="100"
-          className={`header ${isScrolled ? "header-bg" : ""}`}
+          w="100dvw"
+          className={`header ${isScrolled ? "header-bg" : "header-m"}`}
         >
           <a href="/">
-            <Image src="/images/logo.png" h="48px" w="51px" />
+            <Image src="/images/logo.png" h="40px" w="43px" />
           </a>
           <a onClick={onOpen} className="toggle">
             <svg

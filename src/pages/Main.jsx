@@ -15,7 +15,7 @@ import Volastore from "../components/mainComponents/Volastore";
 
 const Main = () => {
   return (
-    <Layout title={"Volaverse"} style={{ overflow: "hidden" }}>
+    <Layout title={"Volaverse"}>
       <section id="home">
         <Home />
       </section>
