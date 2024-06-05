@@ -111,7 +111,7 @@ const BlogsPage = () => {
                     alt="Blog Image"
                   />
                 </Box>
-                <Box>
+                <Box zIndex="100000">
                   <Text
                     color="#3D3D3D"
                     fontFamily="Inter"
@@ -122,7 +122,11 @@ const BlogsPage = () => {
                   >
                     {blogs[0]?.date}
                   </Text>
-                  <Link to={`/blogs/${blogs[0]?.id}`} className="rd-link">
+                  <Link
+                    zIndex="10000"
+                    to={`/blogs/${blogs[0]?.id}`}
+                    className="rd-link"
+                  >
                     <Text
                       color="#3B3B3B"
                       fontFamily="Bebas Neue"
@@ -147,7 +151,9 @@ const BlogsPage = () => {
                   >
                     {blogs[0]?.content[0].desc.substring(0, 300)}...
                   </Text>
-                  <Link to={`/blogs/${blogs[0]?.id}`}>Read More</Link>
+                  <Link zIndex="100" to={`/blogs/${blogs[0]?.id}`}>
+                    Read More
+                  </Link>
                 </Box>
               </Box>
               <hr className="ph-hr ph" />

@@ -54,9 +54,18 @@ const SingleBlog = () => {
         className="all-cnt"
         zIndex="10"
       >
-        <Link to="/blogs" className="back">
-          <span>{"<"}</span>BACK
-        </Link>
+        <Box
+          display="flex"
+          justifyContent="space-between"
+          alignItems="center"
+          mb="50px"
+          className="src-cnt"
+          zIndex="10"
+        >
+          <Link to="/blogs" className="back">
+            <span>{"<"}</span>BACK
+          </Link>
+        </Box>
 
         <Text
           color="#3B3B3B"

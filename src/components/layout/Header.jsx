@@ -41,7 +41,7 @@ const Header = () => {
         alignItems="center"
         p="5px 25px 5px 25px"
         borderBottom="1px solid #3B3B3B"
-        zIndex="100"
+        zIndex="10000000000"
         // position="fixed"
         // background="transparent"
         top="0"
