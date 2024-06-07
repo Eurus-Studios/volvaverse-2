@@ -111,7 +111,7 @@ const BlogsPage = () => {
                     alt="Blog Image"
                   />
                 </Box>
-                <Box zIndex="100000">
+                <Box zIndex="999">
                   <Text
                     color="#3D3D3D"
                     fontFamily="Inter"
